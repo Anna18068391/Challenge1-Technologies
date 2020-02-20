@@ -16,6 +16,7 @@ body{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	box-sizing: border-box;
 }
 
 header{
@@ -38,9 +39,7 @@ h1{
 }
 
 main, article{
-	border:solid 0.2em;
 	border-radius: 2em;
-	margin: 2%;
 	padding: 4%;
 	background-color: white;
 }
@@ -50,6 +49,7 @@ main *, article *{
 }
 
 canvas{
+	margin: 4% 0%;
 }
 
 a{
@@ -61,46 +61,20 @@ a{
 	float:right;
 }
 
-.voedsel{
-	grid-area:voedsel;
-}
-
-.atmosfeer{
-	grid-area:atmosfeer;
-}
-
-.aankomst{
-	grid-area:aankomst;
-}
-
 /*tablet*/
-@media only screen and (min-width: 360px){
-	section{
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-areas:
-	    'aankomst aankomst'
-	    'voedsel atmosfeer';
-	}
+section{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	height: 1000px;
+	align-content: space-around;
+	align-items:flex-start;
 }
 
-/*laptop*/
-@media only screen and (min-width: 768px){
-	section{
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-areas:
-	    'voedsel aankomst'
-	    'voedsel atmosfeer';
-	}
+section article{
+	width:40%;
 }
 
-/*groot scherm*/
-@media only screen and (min-width: 1366px){
-	section{
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-areas:
-	    'voedsel aankomst atmosfeer';
-	}
+section article:last-child{
+	margin-top: 2%;
 }
