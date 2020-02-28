@@ -45,7 +45,7 @@ article{
 	padding: 4%;
 	background-color: white;
 	overflow: hidden;
-	margin-top: 4%;
+	margin: 4%;
 }
 
 article *{
@@ -71,20 +71,51 @@ a{
 
 }
 
+/*header titel*/
+@media only screen and (min-width: 520px){
+	header{
+		height: 80px;
+	}
+
+	header p{
+		top:70px;
+	}
+}
+
 /*laptop*/
 @media only screen and (min-width: 768px){
 	section{
 		display:flex;
 		flex-wrap: wrap;
 		flex-direction: column;
-		height: 1000px;
+		height: 750px;
+		padding-bottom: 10px;
 		align-content: space-around;
 		align-items:flex-start;
 	}
 
 	article{
 		width:40%;
-		margin-top: 2%;
+		margin: 2% 0 0 0;
+	}
+}
+
+/*flexbox hoogte*/
+@media only screen and (min-width: 895px){
+	section{
+		height: 850px;
+	}
+}
+
+@media only screen and (min-width: 1045px){
+	section{
+		height: 950px;
+	}
+}
+
+@media only screen and (min-width: 1190px){
+	section{
+		height: 1050px;
 	}
 }
 
@@ -96,14 +127,21 @@ a{
 		top:auto !important;
 		width:auto;
 	}
-}
 
-@media only screen and (min-width: 520px){
-	header{
-		height: 80px;
+	article{
+		width:24%;
+		margin: 2% 0 0 0;
 	}
 
-	header p{
-		top:70px;
+	canvas{
+		width:auto;
+		height: auto;
+	}
+	section{
+		flex-wrap: nowrap;
+		flex-direction: row;
+		align-content: flex-start;
+		justify-content: space-evenly;
+		height:auto;
 	}
 }
