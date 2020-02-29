@@ -98,35 +98,7 @@ var samenstellingAtmosfeer = new Chart(ctx, {
     	}
 	}
 });
-var ctx = document.getElementById('grafiek3').getContext('2d');
 
-var verwachteAankomst = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-
-    // The data for our dataset
-    data: {
-        labels: ['week 1', 'week 8', 'week 10'],
-        datasets: [{
-            legend: false,
-            fill: false,
-            backgroundColor: 'black',
-            borderColor:'black',
-            lineTension:0,
-            pointRadius: [80, 10, 60],
-            pointHoverRadius: [80, 10, 60],
-            borderDash:[10],
-            data: [0, 44.606405, 55.758006]
-        }]
-    },
-    options: {
-    	legend:{
-  			display:false,
-  		},
-  		scales:{
-  			xAxes: [{
-				display: false,
-			}]
-  		}
-	}
-});
+var data=44.606405;
+var positieRuimteschip= (data*80)/55.758006;
+document.getElementById('schip').style.marginLeft= positieRuimteschip+'%';

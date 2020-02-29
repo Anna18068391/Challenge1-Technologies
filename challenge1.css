@@ -149,3 +149,33 @@ a{
 		height:auto;
 	}
 }
+
+/*aankomst*/
+article.aankomst div{
+	display: flex;
+	align-items: center;
+}
+
+article.aankomst img{
+	  height: 25px;
+	  width: 25px;
+	  background-color: black;
+	  display: inline-block;
+	  border-radius: 50%;
+}
+
+article.aankomst img:first-child{
+	height: 100px;
+	width: 100px;
+}
+
+#schip{
+	position:relative;
+	margin-left: ;
+}
+
+article.aankomst img:last-child{
+	height: 55px;
+	width: 55px;
+	margin-left: auto;
+}
