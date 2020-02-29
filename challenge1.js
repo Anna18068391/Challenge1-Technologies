@@ -98,7 +98,10 @@ var samenstellingAtmosfeer = new Chart(ctx, {
     	}
 	}
 });
-
+//data afgelegde afstand
 var data=44.606405;
 var positieRuimteschip= (data*80)/55.758006;
 document.getElementById('schip').style.marginLeft= positieRuimteschip+'%';
+
+//afgelegde afstand tekst
+afstandTekst.innerHTML=data;
