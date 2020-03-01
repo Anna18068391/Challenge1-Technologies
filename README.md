@@ -1,7 +1,7 @@
 # Challenge1-Technologies
-_Website van Anna 
-CMD jaar 2
-IxD & Technology 2
+_Website van Anna  
+CMD jaar 2  
+IxD & Technology 2  
 2030_
 
 > Elon Musk heeft een responsive interface nodig om de eerste Mars kolonisten te helpen tijdens hun reis naar Mars
@@ -30,7 +30,8 @@ In deze grafiek is te zien hoeveel afstand al afgelegd is door het ruimteschip n
 
 De afbeedingen in de grafiek (de aarde, het Starship en mars) heb ik zelf getekend met een stylus op mijn laptop.
 
-De plek van het schip is gekoppeld aan een JavaScript variabele: 'var data' zodat er makkelijk een andere bron aan gekoppeld kan worden.
+De plek van het schip is gekoppeld aan een JavaScript variabele: `var data` zodat er makkelijk een andere bron aan gekoppeld kan worden.
 
+---
 
 Het koste best wat moeite om deze webite te maken, onder andere om te leren omgaan met chart.js, hoe javascript ook al weer werkte en om alles responsive te krijgen. Ik ben dan ook erg blij met het eindresultaat, de reis naar mars kan beginnen.
