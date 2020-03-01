@@ -66,6 +66,14 @@ a{
 	margin-top:4%;
 }
 
+a:hover{
+	background-color: #333333;
+}
+
+a:active{
+	background-color: #1592E6;
+}
+
 /*tablet*/
 @media only screen and (min-width: 360px){
 
@@ -160,7 +168,6 @@ article.aankomst div{
 article.aankomst img{
 	  height: 20px;
 	  width: 25px;
-	  background-color: black;
 	  display: inline-block;
 	  border-radius: 50%;
 }

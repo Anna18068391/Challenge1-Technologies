@@ -19,10 +19,10 @@ var voedselTijd = new Chart(ctx, {
             backgroundColor: 'black',
             borderColor:'black',
             lineTension:0,
-        	beginAtZero:true,
+          	beginAtZero:true,
             data: [5000, 3212, 6424, 9636, 6060, 4272, 2484, 5696]
             //elke dag eten-1788 bestellen+5000
-            //1begin 2alarm dus bestellen 3kerstinkopen aankomst bestelling 4aankomst kerstinkopen kerst 5-	6-	7alarm dus bestellen 8aankomst bestelling 9toekomst	10toekomst //percentage zelfde bij paren child? //java apart? //tabel text in pixel?
+            //1begin 2alarm dus bestellen 3kerstinkopen aankomst bestelling 4aankomst kerstinkopen kerst 5-	6-	7alarm dus bestellen 8aankomst bestelling 9toekomst	10toekomst
         },
         {
             legend: false,
@@ -30,9 +30,9 @@ var voedselTijd = new Chart(ctx, {
             backgroundColor: '#1592E6',
             borderColor:'#1592E6',
             lineTension:0,
-        	beginAtZero:true,
-        	pointRadius:0,
-        	borderDash:[10],
+          	beginAtZero:true,
+          	pointRadius:0,
+            borderDash:[10],
             data: [3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576]
         }]
     },
