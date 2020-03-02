@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-	<script src="challenge1.js" defer></script>
-	<link rel="stylesheet" type="text/css" href="challenge1.css"/>
-	<!--<link rel="icon" href="....png">-->
-	<title>SpaceX ruimteschip</title>
-</head>
-<body>
-	<header>
-		<p>Week 8 - maandag - 9:00</p>
-		<h1>SpaceX ruimteschip</h1>
-	</header>
-	<section>
-		<article class='voedsel'>
-			<h2>Voedselvooraad</h2>
-			<h3>aantal kilo over aan het begin van de week</h3>
-			<canvas id="grafiek"></canvas>
-			<h3>Notities</h3>
-			<p><b>Week 4:</b> Deze week was het kerst en heeft iedreen twee keer zo veel gegeten.</p>
-			<a href="#">Bestel voedsel</a>
-		</article>
-		<article class='atmosfeer'>
-			<h2>Samenstelling van de atmosfeer in het ruimteschip</h2>
-			<canvas id="grafiek2"></canvas>
-		</article>
-		<article class='aankomst'>
-			<h2>Afgelegde afstand</h2>
-			<h3>in miljoen km</h3>
-			<div class="container">
-				<img src="earth.png" class="dot"/>
-				<img src="schip.png" id="schip"/>
-				<img src="mars.png" class="dot">
-			</div>
-			<p>
-				<b>afgelegd: </b><span id='afstandTekst'></span><br/>
-				<b>eindbestemming: </b>55.758006<br/>
-			</p>
-		</article>
-	</section>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<!--Chart.js-->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<!--JavaSript-->
+		<script src="challenge1.js" defer></script>
+		<!--CSS-->
+		<link rel="stylesheet" type="text/css" href="challenge1.css"/>
+		<!--Favicon-->
+		<link rel="icon" href="schip.png"/>
+		<!--Titel-->
+		<title>SpaceX ruimteschip</title>
+	</head>
+	<body>
+		<header>
+			<!--Algemene gegevens-->
+			<p id="algemeen">Week 8 - maandag - 9:00</p>
+			<h1>SpaceX ruimteschip</h1>
+		</header>
+		<!--Flexbox met grafieken-->
+		<section>
+			<!--Grafiek 1 Voedselvooraad-->
+			<article class='voedsel'>
+				<h2>Voedselvooraad</h2>
+				<h3>aantal kilo over aan het begin van de week</h3>
+				<!--Grafiek Chart.js-->
+				<canvas id="grafiek"></canvas>
+				<h3>Notities</h3>
+				<p><b>Week 4:</b> Deze week was het kerst en heeft iedreen twee keer zo veel gegeten.</p>
+				<a href="#">Bestel voedsel</a>
+			</article>
+			<!--Grafiek 2 Samenstelling atmosfeer-->
+			<article class='atmosfeer'>
+				<h2>Samenstelling van de atmosfeer in het ruimteschip</h2>
+				<!--Grafiek Chart.js-->
+				<canvas id="grafiek2"></canvas>
+			</article>
+			<!--Grafiek 3 Afgelegde afstand-->
+			<article class='aankomst'>
+				<!--Grafiek-->
+				<h2>Afgelegde afstand</h2>
+				<h3>in miljoen km</h3>
+				<div class="container">
+					<img src="earth.png" class="dot"/>
+					<img src="schip.png" id="schip"/>
+					<img src="mars.png" class="dot">
+				</div>
+				<p>
+					<b>afgelegd: </b><span id='afstandTekst'></span><br/>
+					<b>eindbestemming: </b>55.758006<br/>
+				</p>
+			</article>
+		</section>
+	</body>
 </html>

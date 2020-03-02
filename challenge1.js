@@ -1,107 +1,125 @@
-var ctx = document.getElementById('grafiek').getContext('2d');
+//Algemene gegevens in header
+var week=8;
+var dag='maandag';
+var tijd='9:00';
+algemeen.innerHTML='Week '+week+' - '+dag+' - '+tijd;
 
+//Algemene instellingen Chart.js
 Chart.defaults.global.defaultFontFamily = "'Saira Semi Condensed','sans-serif'";
 Chart.defaults.global.defaultFontSize = 16;
 Chart.defaults.global.defaultFontColor = 'black';
 
-Chart.defaults.global.title.fontSize = 24;
-
-var voedselTijd = new Chart(ctx, {
-    // The type of chart we want to create
+//Grafiek 1 Chart.js
+  var ctx = document.getElementById('grafiek').getContext('2d');
+  var voedselTijd = new Chart(ctx, {
+    //Soort
     type: 'line',
-
-    // The data for our dataset
+    //Voedsel lijn zwart
     data: {
+      //X as weken
     	labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        datasets: [{
-            legend: false,
-            fill: false,
-            backgroundColor: 'black',
-            borderColor:'black',
-            lineTension:0,
-          	beginAtZero:true,
-            data: [5000, 3212, 6424, 9636, 6060, 4272, 2484, 5696]
-            //elke dag eten-1788 bestellen+5000
-            //1begin 2alarm dus bestellen 3kerstinkopen aankomst bestelling 4aankomst kerstinkopen kerst 5-	6-	7alarm dus bestellen 8aankomst bestelling 9toekomst	10toekomst
-        },
-        {
-            legend: false,
-            fill: false,
-            backgroundColor: '#1592E6',
-            borderColor:'#1592E6',
-            lineTension:0,
-          	beginAtZero:true,
-          	pointRadius:0,
-            borderDash:[10],
-            data: [3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576]
-        }]
+      //de twee lijnen
+      datasets: [{
+        //geen opvulling onder de lijn
+        fill: false,
+        //kleur lijn
+        backgroundColor: 'black',
+        borderColor:'black',
+        //strakke lijn
+        lineTension:0,
+        beginAtZero:true,
+        //Y as waardes
+        data: [5000, 3212, 6424, 9636, 6060, 4272, 2484, 5696]
+        //elke dag eten-1788 bestellen+5000
+        //1begin 2alarm dus bestellen 3kerstinkopen aankomst bestelling 4aankomst kerstinkopen kerst 5-	6-	7alarm dus bestellen 8aankomst bestelling 9toekomst	10toekomst
+      },
+      //Grens lijn blauw
+      {
+        fill: false,
+        backgroundColor: '#1592E6',
+        borderColor:'#1592E6',
+        lineTension:0,
+      	beginAtZero:true,
+        //geen punten
+      	pointRadius:0,
+        //stippellijn
+        borderDash:[10],
+        data: [3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576]
+      }]
     },
-
-    // Configuration options go here
+    //Instellingen grafiek
     options: {
-  		legend:{
-  			display:false,
-  		},
-  		scales:{
-  			xAxes:[{
-  				scaleLabel:{
-  					display:true,
-  					labelString:'Weken'
-  				}
-  			}]
-  		}
-	}
-});
-
-var ctx = document.getElementById('grafiek2').getContext('2d');
-var samenstellingAtmosfeer = new Chart(ctx, {
-    type: 'bar',
+      //geen legenda
+    	legend:{
+    		display:false,
+    	},
+      //weken naam
+    	scales:{
+    		xAxes:[{
+    			scaleLabel:{
+    				display:true,
+    				labelString:'Weken'
+  		  	}
+    	  }]
+    	}
+  	}
+  });
+//Grafiek 2 Chart.js
+  var ctx = document.getElementById('grafiek2').getContext('2d');
+  var samenstellingAtmosfeer = new Chart(ctx, {
+    type: 'bar', //staafgrafiek
     data: {
-        datasets: [
-        {
+      //de drie blokken
+      datasets: [{
+          //naam
         	label:'Stikstof',
-            backgroundColor: 'black',
-            data: [75.90]
+          //kleur blok
+          backgroundColor: 'black',
+          data: [75.90]
         },
         {
         	label:'Zuurstof',
-            backgroundColor: 'gray',
-        	beginAtZero:true,
-            data: [22.64]
+          backgroundColor: 'gray',
+          data: [22.64]
         },
         {
         	label:'Koolstofdioxide',
-            backgroundColor:'#1592E6',
-            data: [1.45]
-        }]
+          backgroundColor:'#1592E6',
+          data: [1.45]
+      }]
     },
     options: {
+      //legenda staat rechts van de grafiek
   		legend:{
   			position:'right',
   		},
-		tooltips: {
-			callbacks: {
-				title: function() {}
-			}
-	   },
-  		scales: {
-            xAxes: [{
-                stacked: true
-            }],
-            yAxes: [{
-                stacked: true,
-                scaleLabel:{
-  					display:true,
-  					labelString:'Procenten'
-  				}
-            }]
-    	}
-	}
-});
-//data afgelegde afstand
-var data=44.606405;
-var positieRuimteschip= (data*80)/55.758006;
-document.getElementById('schip').style.marginLeft= positieRuimteschip+'%';
-
-//afgelegde afstand tekst
-afstandTekst.innerHTML=data;
+      //geen titel bij hover
+		  tooltips: {
+		  	callbacks: {
+		  		title: function() {}
+		  	}
+      },
+      scales: {
+        xAxes: [{
+          //stapel de grafiek
+          stacked: true
+        }],
+        yAxes: [{
+          stacked: true,
+         //naam procenten
+          scaleLabel:{
+  		  		display:true,
+  				  labelString:'Procenten'
+  		  	}
+        }]
+      }
+  	}
+  });
+//Grafiek 3
+  //huidige positie
+  var data=44.606405;
+  //positie in de grafiek (in procenten)
+  var positieRuimteschip= (data*80)/55.758006;
+  document.getElementById('schip').style.marginLeft= positieRuimteschip+'%';
+  //tekst onder de grafiek
+  afstandTekst.innerHTML=data;

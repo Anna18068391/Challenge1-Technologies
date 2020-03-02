@@ -1,12 +1,14 @@
+/*Lettertypes*/
 @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:400,700&display=swap');
 @font-face{
 	font-family: Anurati;
 	src:url('Anurati.otf');
 }
 
+/*Geen padding en margin op alle elementen*/
 *{
-	margin:0;
 	padding:0;
+	margin:0;
 }
 
 body{
@@ -22,21 +24,21 @@ body{
 header{
 	color: white;
 	background-color: black;
-	padding:20px 10px;
+	padding:20px 0px;
 	height: 100px;
-}
-
-header p{
-	position: absolute;
-	top:100px;
-	width:100%;
-	text-align: center;
 }
 
 h1{
 	font-family: Anurati, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
+	text-align: center;
+}
+
+header p{
+	position: absolute;
+	top:100px;
+	width:100%;
 	text-align: center;
 }
 
