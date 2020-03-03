@@ -28,9 +28,7 @@ body{
 header{
 	color: white;
 	background-color: black;
-	padding:20px 0px;
-	/*absolute text past er ook in*/
-	height: 100px;
+	padding:20px 0;
 }
 
 /*Titel*/
@@ -41,15 +39,11 @@ h1{
 	/*letters verder uit elkaar*/
 	letter-spacing: 0.2em;
 	text-align: center;
-	margin: 0 20px;
+	margin: 15px 20px;
 }
 
 /*Algemene gegevens tekst*/
 header p{
-	/*kan verplaatst worden bij laptop*/
-	position: absolute;
-	/*onder titel*/
-	top:100px;
 	/*centreren*/
 	width:100%;
 	text-align: center;
@@ -143,17 +137,6 @@ article.aankomst img:last-child{
 	margin-left: auto;
 }
 
-/*header titel op 1 lijn break*/
-@media only screen and (min-width: 541px){
-	header{
-		height: 80px;
-	}
-
-	header p{
-		top:70px;
-	}
-}
-
 /*tablet*/
 @media only screen and (min-width: 768px){
 	section{
@@ -196,15 +179,11 @@ article.aankomst img:last-child{
 	}
 
 	/*header algemene gegevens tekst naast titel*/
-	header{
-		height:40px;
-	}
-
-	/*algemene gegevens tekst rechts*/
 	header p{
 		position: absolute;
+		/*verticaal centreren*/
+		top:20%;
 		right:2%;
-		top:auto !important;
 		width:auto;
 	}
 }

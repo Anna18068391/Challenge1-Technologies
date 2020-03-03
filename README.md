@@ -8,7 +8,7 @@ IxD & Technology 2
 
 Op deze website is het dashboard van SpaceX's Starship te zien. Hierin wordt een overzicht van data van het schip getoond. Op dit moment is het schip acht weken onderweg.
 
-Het dashboard is door mij gemaakt met HTML5, CSS en JavaScript. De site is responsive en maakt gebruik van media-queries en Flexbox. Ten slotte is de website klaar om met externe bronnen gekoppeld te worden via JavaScript.
+Het dashboard is door mij gemaakt met HTML5, CSS en JavaScript. De site is responsive en maakt gebruik van media-queries en CSS grid. Hiermee is de lay-out geoptimaliseerd voor verschillende formaten schermen. Ten slotte is de website klaar om met externe bronnen gekoppeld te worden via JavaScript. 
 
 In de volgende hoofstukken zal ik een toelichting geven bij elke grafiek op het dashboard.
 
@@ -32,7 +32,8 @@ De afbeedingen in de grafiek (de aarde, het Starship en mars) heb ik zelf geteke
 
 De plek van het schip is gekoppeld aan een JavaScript variabele: `var data` zodat er makkelijk een andere bron aan gekoppeld kan worden.
 
-
+## Schetsen
+Voordat ik begon met het coderen ben ik eerst gaan brainstormen en schetsen. Schetsen van de brainstotm zijn hier te vinden: [brainstorm](brainstorm.png). De designs voor de 4 schermformaten zijn hier te vinden: [schets mobile](schetsmobile.png), [schets tablet](schetstablet.png), [schets laptop](schetslaptopt.png) en [schets groot scherm](schetsgrootscherm.png).
 ---
 
 Het kostte best wat moeite om deze website te maken, onder andere om te leren omgaan met chart.js, hoe javascript ook al weer werkte en om alles responsive te krijgen. Ik ben dan ook erg blij met het eindresultaat, de reis naar mars kan beginnen!
