@@ -12,12 +12,16 @@
 }
 
 body{
+	/*lettertype*/
 	font-family: 'Saira Semi Condensed',sans-serif;
+	/*lettergrote*/
 	font-size: 1em;
+	/*achtergrond*/
 	background-image: url("ag.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	/*padding en border in grote van box*/
 	box-sizing: border-box;
 }
 
@@ -25,35 +29,47 @@ header{
 	color: white;
 	background-color: black;
 	padding:20px 0px;
+	/*absolute text past er ook in*/
 	height: 100px;
 }
 
+/*Titel*/
 h1{
 	font-family: Anurati, sans-serif;
+	/*hoofdletters*/
 	text-transform: uppercase;
+	/*letters verder uit elkaar*/
 	letter-spacing: 0.2em;
 	text-align: center;
 	margin: 0 20px;
 }
 
+/*Algemene gegevens tekst*/
 header p{
+	/*kan verplaatst worden bij laptop*/
 	position: absolute;
+	/*onder titel*/
 	top:100px;
+	/*centreren*/
 	width:100%;
 	text-align: center;
 }
 
+/*box met grafieken*/
 section{
 	margin: 20px;
 }
 
+/*grafieken*/
 article{
 	border-radius: 2em;
 	padding: 30px;
 	background-color: white;
+	/*voor float knop*/
 	overflow:hidden;
 }
 
+/*top en bottom margin*/
 article:nth-child(2){
 	margin:20px 0;
 }
@@ -66,14 +82,18 @@ h2, h3{
 	margin: 0;
 }
 
+/*grafiek chart.js*/
 canvas{
 	margin-top: 20px;
+	/*grote van box en geen element.style*/
 	width:100% !important;
 }
 
+/*knop*/
 a{
 	color:white;
 	background-color: black;
+	/*geen link opmaak*/
 	text-decoration: none;
 	padding:5px 10px;
 	border-radius: 2em;
@@ -88,7 +108,42 @@ a:active{
 	background-color: #1592E6;
 }
 
-/*header titel*/
+/*Aankomst grafiek 3*/
+/*box grafiek*/
+article.aankomst div{
+	/*items horizontaal centeren*/
+	display: flex;
+	align-items: center;
+}
+
+/*aarde, schip, mars*/
+article.aankomst img{
+	height: 20px;
+	width: 25px;
+	display: inline-block;
+	border-radius: 50%;
+}
+
+/*aarde*/
+article.aankomst img:first-child{
+	height: 50px;
+	width: 50px;
+}
+
+/*positie schip in grafiek*/
+#schip{
+	margin-left: ;
+}
+
+/*mars (grote is ongeveer 60% van de aarde)*/
+article.aankomst img:last-child{
+	height: 30px;
+	width: 30px;
+	/*rechts uitlijnen*/
+	margin-left: auto;
+}
+
+/*header titel op 1 lijn break*/
 @media only screen and (min-width: 541px){
 	header{
 		height: 80px;
@@ -103,11 +158,14 @@ a:active{
 @media only screen and (min-width: 768px){
 	section{
 		display: grid;
+		/*gelijke kolommen*/
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 20px;
+		/*2x2 grid*/
 		grid-template-areas:
 	    'aankomst aankomst'
 	    'voedsel atmosfeer';
+	    /*articles niet het hele vak vullen*/
 	    align-items: start;
 	}
 
@@ -123,6 +181,7 @@ a:active{
 		grid-area:aankomst;
 	}
 
+	/*geen top en bottom margin*/
 	article:nth-child(2){
 	margin:0;
 	}
@@ -136,10 +195,12 @@ a:active{
 	    'voedsel atmosfeer';
 	}
 
+	/*header algemene gegevens tekst naast titel*/
 	header{
 		height:40px;
 	}
 
+	/*algemene gegevens tekst rechts*/
 	header p{
 		position: absolute;
 		right:2%;
@@ -151,38 +212,11 @@ a:active{
 /*groot scherm*/
 @media only screen and (min-width: 1440px){
 	section{
+		/*articles even groot*/
 		align-items: stretch;
 		grid-template-columns: 2fr 1fr 2fr;
+		/*grafieken naast elkaar*/
 		grid-template-areas:
 	    'voedsel aankomst atmosfeer';
 	}
-}
-
-/*aankomst*/
-article.aankomst div{
-	display: flex;
-	align-items: center;
-}
-
-article.aankomst img{
-	height: 20px;
-	width: 25px;
-	display: inline-block;
-	border-radius: 50%;
-}
-
-article.aankomst img:first-child{
-	height: 50px;
-	width: 50px;
-}
-
-#schip{
-	position:relative;
-	margin-left: ;
-}
-
-article.aankomst img:last-child{
-	height: 30px;
-	width: 30px;
-	margin-left: auto;
 }
