@@ -18,19 +18,19 @@ Chart.defaults.global.defaultFontColor = 'black';
     data: {
       //X as weken
     	labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      //de twee lijnen
+      //De twee lijnen
       datasets: [{
-        //geen opvulling onder de lijn
+        //Geen opvulling onder de lijn
         fill: false,
-        //kleur lijn
+        //Kleur lijn
         backgroundColor: 'black',
         borderColor:'black',
-        //strakke lijn
+        //Strakke lijn
         lineTension:0,
         beginAtZero:true,
         //Y as waardes
         data: [5000, 3212, 6424, 9636, 6060, 4272, 2484, 5696]
-        //elke dag eten-1788 bestellen+5000
+        //Elke dag eten-1788 bestellen+5000
         //1begin 2alarm dus bestellen 3kerstinkopen aankomst bestelling 4aankomst kerstinkopen kerst 5-	6-	7alarm dus bestellen 8aankomst bestelling 9toekomst	10toekomst
       },
       //Grens lijn blauw
@@ -40,20 +40,20 @@ Chart.defaults.global.defaultFontColor = 'black';
         borderColor:'#1592E6',
         lineTension:0,
       	beginAtZero:true,
-        //geen punten
+        //Geen punten
       	pointRadius:0,
-        //stippellijn
+        //Stippellijn
         borderDash:[10],
         data: [3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576, 3576]
       }]
     },
     //Instellingen grafiek
     options: {
-      //geen legenda
+      //Geen legenda
     	legend:{
     		display:false,
     	},
-      //weken naam
+      //Weken naam
     	scales:{
     		xAxes:[{
     			scaleLabel:{
@@ -67,13 +67,14 @@ Chart.defaults.global.defaultFontColor = 'black';
 //Grafiek 2 Chart.js
   var ctx = document.getElementById('grafiek2').getContext('2d');
   var samenstellingAtmosfeer = new Chart(ctx, {
-    type: 'bar', //staafgrafiek
+    //Staafgrafiek
+    type: 'bar',
     data: {
-      //de drie blokken
+      //De drie blokken
       datasets: [{
-          //naam
+          //Naam
         	label:'Stikstof',
-          //kleur blok
+          //Kleur blok
           backgroundColor: 'black',
           data: [75.90]
         },
@@ -89,11 +90,11 @@ Chart.defaults.global.defaultFontColor = 'black';
       }]
     },
     options: {
-      //legenda staat rechts van de grafiek
+      //Legenda staat rechts van de grafiek
   		legend:{
   			position:'right',
   		},
-      //geen titel bij hover
+      //Geen titel bij hover
 		  tooltips: {
 		  	callbacks: {
 		  		title: function() {}
@@ -101,12 +102,12 @@ Chart.defaults.global.defaultFontColor = 'black';
       },
       scales: {
         xAxes: [{
-          //stapel de grafiek
+          //Stapel de grafiek
           stacked: true
         }],
         yAxes: [{
           stacked: true,
-         //naam procenten
+         //Naam procenten
           scaleLabel:{
   		  		display:true,
   				  labelString:'Procenten'
@@ -116,25 +117,29 @@ Chart.defaults.global.defaultFontColor = 'black';
   	}
   });
 //Grafiek 3
+  //Afstand ruimteschip vanaf aarde
+  var data=44.606405;
+  //Tekst onder de grafiek
+  afstandTekst.innerHTML=data;
+  //Bereken grafiek horizontaal of verticaal en afstand van schip
   function berekenGrafiek3() {
-    //afstand ruimteschip vanaf aarde
-    var data=44.606405;
-    //grote box horizontaal of verticaal
+    //Grootte box
+    //Verticaal
     if (screen.width>=1440) 
       {var maxData=72}
+    //Horizontaal
     else
       {var maxData=80};
-    //positie in de grafiek (in procenten)
+    //Positie in de grafiek (in procenten)
     var positieRuimteschip= (data*maxData)/55.758006;
-    //plek van margin horizontaal of verticaal
+    //Plek van margin horizontaal of verticaal
     if (screen.width>=1440) 
       {document.getElementById('schip').style.marginBottom= positieRuimteschip+'%';
       document.getElementById('schip').style.marginLeft= 0;}
     else
       {document.getElementById('schip').style.marginLeft= positieRuimteschip+'%';
-      document.getElementById('schip').style.marginBottom= 0;};
-    //tekst onder de grafiek
-    afstandTekst.innerHTML=data;
+      document.getElementById('schip').style.marginBottom= 10+'px';};
   }
-  //actie bij scherm veranderen
+  //Functie uitvoeren bij start en scherm veranderen
+  window.onload = berekenGrafiek3;
   window.onresize = berekenGrafiek3;

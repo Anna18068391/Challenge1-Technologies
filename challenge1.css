@@ -12,16 +12,16 @@
 }
 
 body{
-	/*lettertype*/
+	/*Lettertype*/
 	font-family: 'Saira Semi Condensed',sans-serif;
-	/*lettergrote*/
+	/*Lettergrootte*/
 	font-size: 1em;
-	/*achtergrond*/
+	/*Achtergrond*/
 	background-image: url("ag.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	/*padding en border in grote van box*/
+	/*Padding en border in grootte van box*/
 	box-sizing: border-box;
 }
 
@@ -34,9 +34,9 @@ header{
 /*Titel*/
 h1{
 	font-family: Anurati, sans-serif;
-	/*hoofdletters*/
+	/*Hoofdletters*/
 	text-transform: uppercase;
-	/*letters verder uit elkaar*/
+	/*Letters verder uit elkaar*/
 	letter-spacing: 0.2em;
 	text-align: center;
 	margin: 15px 20px;
@@ -44,26 +44,26 @@ h1{
 
 /*Algemene gegevens tekst*/
 header p{
-	/*centreren*/
+	/*Centreren*/
 	width:100%;
 	text-align: center;
 }
 
-/*box met grafieken*/
+/*Box met grafieken*/
 section{
 	margin: 20px;
 }
 
-/*grafieken*/
+/*Grafieken*/
 article{
 	border-radius: 2em;
 	padding: 30px;
 	background-color: white;
-	/*voor float knop*/
+	/*Voor float knop*/
 	overflow:hidden;
 }
 
-/*top en bottom margin*/
+/*Top en bottom margin*/
 article:nth-child(2){
 	margin:20px 0;
 }
@@ -76,18 +76,18 @@ h2, h3{
 	margin: 0;
 }
 
-/*grafiek chart.js*/
+/*Grafiek chart.js*/
 canvas{
 	margin-top: 20px;
-	/*grote van box en geen element.style*/
+	/*Grootte van box en geen element.style*/
 	width:100% !important;
 }
 
-/*knop*/
+/*Knop*/
 a{
 	color:white;
 	background-color: black;
-	/*geen link opmaak*/
+	/*Geen link opmaak*/
 	text-decoration: none;
 	padding:5px 10px;
 	border-radius: 2em;
@@ -102,15 +102,15 @@ a:active{
 	background-color: #1592E6;
 }
 
-/*Aankomst grafiek 3*/
-/*box grafiek*/
+/*Grafiek 3 - aankomst*/
+/*Box van grafiek*/
 article.aankomst div{
-	/*items horizontaal centeren*/
+	/*Items horizontaal centeren*/
 	display: flex;
 	align-items: center;
 }
 
-/*aarde, schip, mars*/
+/*Aarde, schip, Mars*/
 article.aankomst img{
 	height: 20px;
 	width: 25px;
@@ -118,32 +118,32 @@ article.aankomst img{
 	border-radius: 50%;
 }
 
-/*aarde*/
+/*Aarde*/
 article.aankomst img:first-child{
 	height: 50px;
 	width: 50px;
 }
 
-/*mars (grote is ongeveer 60% van de aarde)*/
+/*Mars (grootte is ongeveer 60% van de aarde)*/
 article.aankomst img:last-child{
 	height: 30px;
 	width: 30px;
-	/*rechts uitlijnen*/
+	/*Rechts uitlijnen*/
 	margin-left: auto;
 }
 
-/*tablet*/
+/*Tablet*/
 @media only screen and (min-width: 768px){
 	section{
 		display: grid;
-		/*gelijke kolommen*/
+		/*Gelijke kolommen*/
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 20px;
 		/*2x2 grid*/
 		grid-template-areas:
 	    'aankomst aankomst'
 	    'voedsel atmosfeer';
-	    /*articles niet het hele vak vullen*/
+	    /*Articles niet het hele vak vullen*/
 	    align-items: start;
 	}
 
@@ -159,59 +159,59 @@ article.aankomst img:last-child{
 		grid-area:aankomst;
 	}
 
-	/*geen top en bottom margin*/
+	/*Geen top en bottom margin*/
 	article:nth-child(2){
 	margin:0;
 	}
 }
 
-/*laptop*/
-@media only screen and (min-width: 1366px){
+/*Laptop*/
+@media only screen and (min-width: 1024px){
 	section{
 		grid-template-areas:
 	    'voedsel aankomst'
 	    'voedsel atmosfeer';
 	}
 
-	/*header algemene gegevens tekst naast titel*/
+	/*Header algemene gegevens tekst naast titel*/
 	header p{
 		position: absolute;
-		/*verticaal centreren*/
-		top:20%;
-		right:2%;
+		/*Verticaal centreren*/
+		top:42px;
+		right:20px;
 		width:auto;
 	}
 }
 
-/*groot scherm*/
+/*Groot scherm*/
 @media only screen and (min-width: 1440px){
 	section{
-		/*articles even groot*/
+		/*Articles even groot*/
 		align-items: stretch;
-		grid-template-columns: 2fr 1fr 2fr;
-		/*grafieken naast elkaar*/
+		grid-template-columns: 1fr 2fr 2fr;
+		/*Grafieken naast elkaar*/
 		grid-template-areas:
 	    'aankomst voedsel atmosfeer';
 	}
 
-	/*Aankomst grafiek 3*/
-	/*box grafiek*/
+	/*Aankomst grafiek 3 verticaal*/
+	/*Box grafiek*/
 	article.aankomst div{
-	/*items horizontaal centeren*/
 	height: 60%;
+	/*Items verticaal ordenen*/
 	flex-direction: column-reverse;
+	/*Items horizontaal centeren*/
 	align-items: center;
 	}
 
-	/*positie schip in grafiek*/
 	#schip{
+		/*Afbeelding draaien*/
 		transform: rotate(270deg);
-		align-self: center;
 	}
 
-	/*mars*/
+	/*Mars*/
 	article.aankomst img:last-child{
-		/*rechts uitlijnen*/
+		/*Top uitlijnen*/
 		margin-bottom: auto;
 		margin-left:unset; 
 	}
