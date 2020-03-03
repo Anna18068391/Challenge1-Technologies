@@ -33,7 +33,8 @@ De afbeedingen in de grafiek (de aarde, het Starship en mars) heb ik zelf geteke
 De plek van het schip is gekoppeld aan een JavaScript variabele: `var data` zodat er makkelijk een andere bron aan gekoppeld kan worden.
 
 ## Schetsen
-Voordat ik begon met het coderen ben ik eerst gaan brainstormen en schetsen. Schetsen van de brainstotm zijn hier te vinden: [brainstorm](brainstorm.png). De designs voor de 4 schermformaten zijn hier te vinden: [schets mobile](schetsmobile.png), [schets tablet](schetstablet.png), [schets laptop](schetslaptopt.png) en [schets groot scherm](schetsgrootscherm.png).
+Voordat ik begon met het coderen ben ik eerst gaan brainstormen en schetsen. Schetsen van de brainstotm zijn hier te vinden: [brainstorm](brainstorm.png). De designs voor de 4 schermformaten zijn hier te vinden: [schets mobile](schetsmobile.png), [schets tablet](schetstablet.png), [schets laptop](schetslaptop.png) en [schets groot scherm](schetsgrootscherm.png).
+
 ---
 
 Het kostte best wat moeite om deze website te maken, onder andere om te leren omgaan met chart.js, hoe javascript ook al weer werkte en om alles responsive te krijgen. Ik ben dan ook erg blij met het eindresultaat, de reis naar mars kan beginnen!
