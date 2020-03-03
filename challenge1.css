@@ -124,11 +124,6 @@ article.aankomst img:first-child{
 	width: 50px;
 }
 
-/*positie schip in grafiek*/
-#schip{
-	margin-left: ;
-}
-
 /*mars (grote is ongeveer 60% van de aarde)*/
 article.aankomst img:last-child{
 	height: 30px;
@@ -196,6 +191,28 @@ article.aankomst img:last-child{
 		grid-template-columns: 2fr 1fr 2fr;
 		/*grafieken naast elkaar*/
 		grid-template-areas:
-	    'voedsel aankomst atmosfeer';
+	    'aankomst voedsel atmosfeer';
+	}
+
+	/*Aankomst grafiek 3*/
+	/*box grafiek*/
+	article.aankomst div{
+	/*items horizontaal centeren*/
+	height: 60%;
+	flex-direction: column-reverse;
+	align-items: center;
+	}
+
+	/*positie schip in grafiek*/
+	#schip{
+		transform: rotate(270deg);
+		align-self: center;
+	}
+
+	/*mars*/
+	article.aankomst img:last-child{
+		/*rechts uitlijnen*/
+		margin-bottom: auto;
+		margin-left:unset; 
 	}
 }

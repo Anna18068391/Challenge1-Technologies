@@ -116,10 +116,25 @@ Chart.defaults.global.defaultFontColor = 'black';
   	}
   });
 //Grafiek 3
-  //huidige positie
-  var data=44.606405;
-  //positie in de grafiek (in procenten)
-  var positieRuimteschip= (data*80)/55.758006;
-  document.getElementById('schip').style.marginLeft= positieRuimteschip+'%';
-  //tekst onder de grafiek
-  afstandTekst.innerHTML=data;
+  function berekenGrafiek3() {
+    //afstand ruimteschip vanaf aarde
+    var data=44.606405;
+    //grote box horizontaal of verticaal
+    if (screen.width>=1440) 
+      {var maxData=72}
+    else
+      {var maxData=80};
+    //positie in de grafiek (in procenten)
+    var positieRuimteschip= (data*maxData)/55.758006;
+    //plek van margin horizontaal of verticaal
+    if (screen.width>=1440) 
+      {document.getElementById('schip').style.marginBottom= positieRuimteschip+'%';
+      document.getElementById('schip').style.marginLeft= 0;}
+    else
+      {document.getElementById('schip').style.marginLeft= positieRuimteschip+'%';
+      document.getElementById('schip').style.marginBottom= 0;};
+    //tekst onder de grafiek
+    afstandTekst.innerHTML=data;
+  }
+  //actie bij scherm veranderen
+  window.onresize = berekenGrafiek3;
